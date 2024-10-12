@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   fadeInSlider,
-  slideInFromBottom,
   slideInFromLeft,
   slideInFromTop,
 } from "@/utils/motion";
@@ -20,7 +19,6 @@ const findAgentInfo = (displayName: string) => {
 };
 
 export const CustomCardAgentInfo = ({ agentInfo }: AgentInfoProps) => {
-  const animateDelay = 0.3;
   const agentBackgroundColorData = findAgentInfo(agentInfo.displayName);
   const backgroundColor = agentBackgroundColorData?.bgColor || "#FF4655";
 

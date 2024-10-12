@@ -50,9 +50,9 @@ export interface CharacterDataProps {
   isAvailableForTest: boolean;
   isBaseContent: boolean;
   role: Role;
-  recruitmentData: any | null;
+  recruitmentData: string | null;
   abilities: Ability[];
-  voiceLine: any | null;
+  voiceLine: string | null;
 }
 
 export type AgentsDataProps = {
@@ -79,8 +79,8 @@ interface WeaponStats {
     burstCount: number;
     firstBulletAccuracy: number;
   };
-  altShotgunStats: any | null;
-  airBurstStats: any | null;
+  altShotgunStats: string | null;
+  airBurstStats: string | null;
   damageRanges: {
     rangeStartMeters: number;
     rangeEndMeters: number;

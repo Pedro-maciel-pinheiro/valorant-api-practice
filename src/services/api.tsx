@@ -1,5 +1,5 @@
 
-import { CharacterDataProps, WeaponDataProps } from "@/types";
+import { CharacterDataProps } from "@/types";
 
 const BASE_URL = "https://valorant-api.com/v1/agents";
 
@@ -14,7 +14,8 @@ export const GetApiData = async (): Promise<CharacterDataProps[]> => {
 
     return AgentsData.data;
   } catch (error) {
-    throw new Error();
+    console.error(error)
+    throw new Error('Failed to fetch agent data');
   }
 };
 

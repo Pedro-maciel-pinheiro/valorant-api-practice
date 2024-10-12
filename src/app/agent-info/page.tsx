@@ -1,5 +1,4 @@
 import { CustomCardInformationWrapper } from "@/components/custom/customcard-information-wrapper";
-import { HomeVideo } from "@/components/home/home-video";
 import { LoadingSpin } from "@/components/loading/loading-spin";
 
 import { SearchParamsProps } from "@/types";

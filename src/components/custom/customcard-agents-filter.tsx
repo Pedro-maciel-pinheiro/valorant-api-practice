@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { link_agents } from "@/constant/link-agents";
 import { ValorantFont } from "@/app/fonts";
 import { motion } from "framer-motion";

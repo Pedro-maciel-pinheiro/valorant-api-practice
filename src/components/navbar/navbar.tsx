@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { link_path } from "@/constant/link-path";
 import Link from "next/link";
 

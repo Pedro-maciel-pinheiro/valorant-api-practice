@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Anek_Devanagari} from "next/font/google";
 import "./globals.css";
 
