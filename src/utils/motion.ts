@@ -76,8 +76,8 @@ export function getTransitionProps(delay: number) {
       delay: delay,
       duration: 0.2, // Increase duration for a smoother transition
       type: "spring",
-      stiffness: 20, // Lower stiffness for a smoother, less rigid spring
-      damping: 10, // Increase damping to reduce oscillation
+      stiffness: 60, // Lower stiffness for a smoother, less rigid spring
+      damping: 15, // Increase damping to reduce oscillation
       mass: 0.2, // Adjust mass to control the inertia of the spring
     },
   };
@@ -155,10 +155,10 @@ export function slideInFromBottom(delay: number) {
       opacity: 0,
       transition: {
         delay: 0,
-        duration: 0.3,
+        duration: 0.1,
         type: "spring",
-        stiffness: 50,
-        damping: 20,
+        stiffness: 80,
+        damping: 15,
         mass: 0.5,
       },
     },

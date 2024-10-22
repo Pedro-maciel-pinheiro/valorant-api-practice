@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <section
       id="agents"
-      className="relative h-auto w-full scroll-mt-28 bg-foreground lg:scroll-mt-56"
+      className="relative h-auto w-full  bg-foreground "
     >
       <ul className="relative mx-auto grid max-w-[90%] gap-2 lg:grid-cols-2 xl:max-w-[1440px]">
         <li className="order-last lg:order-first">

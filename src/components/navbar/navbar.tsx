@@ -7,7 +7,7 @@ import Link from "next/link";
 const Navbar = () => {
   const animateDelay = 0.5;
   return (
-    <motion.nav className="fixed z-40 flex h-16 w-full items-center bg-black">
+    <motion.nav className="sticky z-40 flex h-16 w-full items-center bg-black top-0">
       <div className="absolute mx-4 flex items-center justify-start">
         <Link href={"/"}>
           <svg

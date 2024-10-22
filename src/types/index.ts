@@ -1,4 +1,37 @@
+interface Chroma {
+  uuid: string;
+  displayName: string;
+  displayIcon: string | null;
+  fullRender: string;
+  swatch: string | null;
+  streamedVideo: string | null;
+  assetPath: string;
+}
 
+interface Level {
+  uuid: string;
+  displayName: string;
+  levelItem: string | null;
+  displayIcon: string;
+  streamedVideo: string | null;
+  assetPath: string;
+}
+
+export interface WeaponSkin {
+  uuid: string;
+  displayName: string;
+  themeUuid: string;
+  contentTierUuid: string;
+  displayIcon: string;
+  wallpaper: string | null;
+  assetPath: string;
+  chromas: Chroma[];
+  levels: Level[];
+}
+
+export interface SkinDataProps {
+  skinData:WeaponSkin[]
+}
 
 export type SearchParamsProps = {
   searchParams: {
@@ -11,9 +44,16 @@ export type SearchParamsAgentsProps = {
   };
 };
 
-export type AgentsProps = {
-  agents: CharacterDataProps[]
+export type SearchParamsWeaponSkinProps = {
+  searchParams:{
+    name?:string
+  }
+  weaponSkinData: WeaponSkin[];
 }
+
+export type AgentsProps = {
+  agents: CharacterDataProps[];
+};
 
 interface Role {
   uuid: string;
@@ -57,7 +97,7 @@ export interface CharacterDataProps {
 
 export type AgentsDataProps = {
   agents: CharacterDataProps[];
-  role:string | undefined
+  role: string | undefined;
 };
 
 interface WeaponStats {
@@ -106,36 +146,7 @@ interface ShopData {
   assetPath: string;
 }
 
-interface WeaponChroma {
-  uuid: string;
-  displayName: string;
-  displayIcon: string | null;
-  fullRender: string;
-  swatch: string | null;
-  streamedVideo: string | null;
-  assetPath: string;
-}
 
-interface WeaponLevel {
-  uuid: string;
-  displayName: string;
-  levelItem: string | null;
-  displayIcon: string;
-  streamedVideo: string | null;
-  assetPath: string;
-}
-
-interface WeaponSkin {
-  uuid: string;
-  displayName: string;
-  themeUuid: string;
-  contentTierUuid: string;
-  displayIcon: string;
-  wallpaper: string | null;
-  assetPath: string;
-  chromas: WeaponChroma[];
-  levels: WeaponLevel[];
-}
 
 export interface WeaponDataProps {
   uuid: string;
@@ -148,4 +159,10 @@ export interface WeaponDataProps {
   weaponStats: WeaponStats;
   shopData: ShopData;
   skins: WeaponSkin[];
+}
+
+
+
+export interface WeaponSelectorProps {
+  weaponData:WeaponDataProps[]
 }

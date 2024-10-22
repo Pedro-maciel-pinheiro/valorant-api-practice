@@ -1,3 +1,4 @@
+
 import { LoadingLogo } from "@/components/loading/loading-logo";
 
 import React, { Suspense } from "react";
