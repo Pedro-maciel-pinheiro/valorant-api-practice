@@ -29,7 +29,7 @@ export const CustomWeaponSelector = ({ weaponData }: WeaponSelectorProps) => {
           available skins!
         </p>
       </motion.div>
-      <div className="mx-auto grid max-w-7xl gap-3 md:grid-cols-2 lg:grid-cols-3 mb-20">
+      <div className="mx-auto mb-20 grid max-w-7xl gap-3 md:grid-cols-2 lg:grid-cols-3">
         {weaponData.map((item, index) => (
           <motion.div
             variants={fadeInSlider}

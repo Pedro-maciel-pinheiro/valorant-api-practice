@@ -2,13 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  scroll-behavior: smooth;
-}
 
-body::-webkit-scrollbar{
-  display: none;
-}
+
+
 
 .loader {
   position: relative;

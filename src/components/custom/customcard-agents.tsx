@@ -7,6 +7,8 @@ import Link from "next/link";
 import { fadeInSlider } from "@/utils/motion";
 import { ValorantFont } from "@/app/fonts";
 
+
+
 export const CustomCardAgents = ({ agents, role }: AgentsDataProps) => {
   return (
     <section className="flex h-auto w-full flex-col items-center justify-center bg-slate-900">

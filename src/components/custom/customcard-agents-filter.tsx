@@ -27,6 +27,9 @@ export const CustomCardAgentsFilter = () => {
     window.addEventListener("resize", updateWidthSize);
     return () => window.removeEventListener("resize", updateWidthSize);
   }, []);
+
+  
+
   return (
     <>
       <div className={ValorantFont.className}>

@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Anek_Devanagari} from "next/font/google";
+import { Anek_Devanagari } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/navbar/navbar";
+import ScrollToTop from "@/components/scroll-to-top";
 
-
-
-const anek = Anek_Devanagari ({ subsets: ["latin"] , weight:"400" });
+const anek = Anek_Devanagari({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Valorant info",
@@ -20,10 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${anek.className} antialiased`}
-      >  
-        <Navbar/>
+      <body className={`${anek.className} antialiased`}>
+        <ScrollToTop />
+        <Navbar />
         {children}
       </body>
     </html>
