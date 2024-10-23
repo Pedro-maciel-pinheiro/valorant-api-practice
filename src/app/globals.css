@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 
-
+*{
+  scroll-behavior: smooth;
+}
 
 
 .loader {

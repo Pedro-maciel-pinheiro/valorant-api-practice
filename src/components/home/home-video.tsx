@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const HomeVideo = () => {
   return (
-    <section className="flex h-auto w-full items-center">
+    <section className="flex h-auto w-full items-center ">
       <div className="relative flex items-center justify-center">
         <span className="absolute h-full w-full bg-black/50" />
         <video

@@ -38,17 +38,17 @@ export const CustomCardAgentsFilter = () => {
         </h2>
       </div>
 
-      <section className="relative h-auto max-w-[95%] overflow-hidden px-8 py-8 xl:max-w-[1500px]">
+      <section className="h-auto  overflow-hidden  xl:max-w-[1500px] lg:mx-auto">
         <Swiper
           slidesPerView={slidePerView}
           spaceBetween={30}
           speed={1200}
           grabCursor={true}
           
-          className={`h-full w-full max-w-[500px] lg:max-w-full`}
+          className={`max-w-[90%]`}
         >
           {link_agents.map((link, index) => (
-            <SwiperSlide className="h-full w-full" key={link.title}>
+            <SwiperSlide className="h-full w-full py-2 px-2" key={link.title}>
               <Link href={link.href}>
                 <motion.ul
                   initial="hidden"
@@ -56,7 +56,7 @@ export const CustomCardAgentsFilter = () => {
                   variants={fadeInSlider}
                   viewport={{ once: true }}
                   custom={index}
-                  className="flex cursor-grab flex-col items-center active:cursor-grabbing"
+                  className="flex cursor-grab flex-col items-center  active:cursor-grabbing"
                 >
                   <li draggable={false}>
                     <Image

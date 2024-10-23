@@ -7,9 +7,10 @@ export const Hero = () => {
   return (
     <section
       id="agents"
-      className="relative h-auto w-full  bg-foreground "
+      className="relative h-auto w-full  bg-foreground scroll-mt-28 lg:scroll-mt-96 
+      flex flex-col items-center justify-center"
     >
-      <ul className="relative mx-auto grid max-w-[90%] gap-2 lg:grid-cols-2 xl:max-w-[1440px]">
+      <ul className="relative lg:mx-auto grid max-w-[90%] gap-2 lg:grid-cols-2 xl:max-w-[1440px]">
         <li className="order-last lg:order-first">
           <Image
             src={"/img/viper-background.webp"}

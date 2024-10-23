@@ -7,16 +7,14 @@ export const link_path = [
   },
   {
     title: "Agents",
-    href: "#agents",
+    href: "/agents?role=All",
   },
   {
     title: "Weapons",
-    href: "#weapons",
+    href: "/weapons",
   },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
+  
+  
 ] as const;
 
 

@@ -13,12 +13,12 @@ export const CustomCardAgents = ({ agents, role }: AgentsDataProps) => {
   return (
     <section className="flex h-auto w-full flex-col items-center justify-center bg-slate-900">
       <div className="h-full w-full max-w-[90%] xl:max-w-[1300px]">
-        <div className="flex h-96 w-full items-center">
-          <h2 className={`text-7xl text-white ${ValorantFont.className}`}>
+        <div className="flex h-36 lg:h-96 w-full items-center">
+          <h2 className={`text-2xl md:text-4xl lg:text-7xl text-white ${ValorantFont.className}`}>
             {role}
             {"-"}
           </h2>
-          <h1 className={`text-7xl text-white ${ValorantFont.className}`}>
+          <h1 className={`text-2xl md:text-4xl lg:text-7xl text-white ${ValorantFont.className}`}>
             AGENTS
           </h1>
         </div>
