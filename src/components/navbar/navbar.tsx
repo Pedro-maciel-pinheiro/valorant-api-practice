@@ -72,6 +72,7 @@ const Navbar = () => {
             >
               {link_path.map((link, index) => (
                 <motion.li
+                  key={link.title}
                   initial="hidden"
                   whileInView={"visible"}
                   variants={fadeInSlider}
