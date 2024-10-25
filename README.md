@@ -10,8 +10,11 @@ Smooth Video Transitions: Utilizing framer-motion, video transitions and animati
 
 <h1>Tech Stack</h1>
 
-Next.js 14
-Framer Motion
-TypeScript
-Tailwind
-Swiper
+<p>Next.js 14</p>
+<p>Framer Motion</p>
+<p>TypeScript</p>
+<p>Tailwind</p>
+<p>Swiper</p>
+
+
+
