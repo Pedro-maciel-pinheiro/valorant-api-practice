@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { link_agents } from "@/constant/link-agents";
 import { ValorantFont } from "@/app/fonts";
 import { motion } from "framer-motion";
@@ -13,14 +13,18 @@ import { fadeInSlider } from "@/utils/motion";
 
 export const CustomCardAgentsFilter = () => {
   const [slidePerView, setSlidePerView] = useState<number>(3);
+  const [progress, setProgress] = useState<number>(0);
+
   useEffect(() => {
     const updateWidthSize = () => {
       const widthResize = window.innerWidth;
 
       if (widthResize < 1100) {
         setSlidePerView(1);
+        setProgress((1 / link_agents.length) * 100);
       } else {
         setSlidePerView(3);
+        setProgress((3 / link_agents.length) * 100);
       }
     };
     updateWidthSize();
@@ -28,7 +32,15 @@ export const CustomCardAgentsFilter = () => {
     return () => window.removeEventListener("resize", updateWidthSize);
   }, []);
 
-  
+  const handleSlideChange = (swiper: SwiperClass) => {
+    const totalSlides = link_agents.length;
+    const visibleSlides = Math.min(slidePerView, totalSlides);
+    const currentIndex = swiper.activeIndex;
+
+    const progressPercent =
+      ((currentIndex + visibleSlides) / totalSlides) * 100;
+    setProgress(progressPercent);
+  };
 
   return (
     <>
@@ -38,17 +50,17 @@ export const CustomCardAgentsFilter = () => {
         </h2>
       </div>
 
-      <section className="h-auto  overflow-hidden  xl:max-w-[1500px] lg:mx-auto">
+      <section className="h-auto overflow-hidden lg:mx-auto xl:max-w-[1500px]">
         <Swiper
           slidesPerView={slidePerView}
           spaceBetween={30}
           speed={1200}
           grabCursor={true}
-          
           className={`max-w-[90%]`}
+          onSlideChange={handleSlideChange}
         >
           {link_agents.map((link, index) => (
-            <SwiperSlide className="h-full w-full py-2 px-2" key={link.title}>
+            <SwiperSlide className="h-full w-full px-2 py-2" key={link.title}>
               <Link href={link.href}>
                 <motion.ul
                   initial="hidden"
@@ -56,7 +68,7 @@ export const CustomCardAgentsFilter = () => {
                   variants={fadeInSlider}
                   viewport={{ once: true }}
                   custom={index}
-                  className="flex cursor-grab flex-col items-center  active:cursor-grabbing"
+                  className="flex cursor-grab flex-col items-center active:cursor-grabbing"
                 >
                   <li draggable={false}>
                     <Image
@@ -83,6 +95,16 @@ export const CustomCardAgentsFilter = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        <div className="mx-auto mt-4 h-2 w-full max-w-[90%]
+         overflow-hidden rounded-lg bg-gray-300">
+          <motion.div
+            initial={{ width: `${progress}%` }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="h-full bg-foreground"
+          />
+        </div>
       </section>
     </>
   );
